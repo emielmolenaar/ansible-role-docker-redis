@@ -1,0 +1,10 @@
+---
+
+- name: "[docker] Ensure the redis docker container is present"
+  docker_container:
+    name: "{{ docker_redis_container_name }}"
+    image: "{{ docker_redis_image }}:{{ docker_redis_tag }}"
+    state: started
+    restart: yes
+    restart_policy: unless-stopped
+    ports: "{{ docker_redis_ports }}"

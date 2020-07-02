@@ -1,0 +1,6 @@
+---
+
+docker_redis_ports: "6379:6379"
+docker_redis_image: "redis"
+docker_redis_tag: "latest"
+docker_redis_container_name: redis
